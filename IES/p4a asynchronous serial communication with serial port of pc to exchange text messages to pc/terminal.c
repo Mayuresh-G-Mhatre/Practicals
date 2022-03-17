@@ -7,24 +7,13 @@ void main(void)	{
 	TH1 = 0XFD; //set baud rate 9600
 	SCON = 0X50; //configure SCON register
 	TR1 = 1;
-	send('Y');
-	send('o');
+	send('S');
+	send('h');
 	send('u');
-	send(' ');
-	send('a');
-	send('r');
-	send('e');
-	send(' ');
+	send('b');
 	send('h');
 	send('a');
-	send('c');
-	send('k');
-	send('e');
-	send('d');
-	send(' ');
-	send('^');
-	send('_');
-	send('^');
+	send('m');
 	while(1);
 }
 
