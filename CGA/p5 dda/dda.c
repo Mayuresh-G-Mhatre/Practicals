@@ -35,11 +35,11 @@ void main() {
 	y = y1;
 	i = 1;
 	while(i<pixel) {
-		putpixel(x, y, 1);
+		putpixel(x, y, WHITE);
 		x = x + dx;
 		y = y + dy;
 		i = i + 1;
-		delay(100);
+		delay(50);
 	}
 
 	getch();
