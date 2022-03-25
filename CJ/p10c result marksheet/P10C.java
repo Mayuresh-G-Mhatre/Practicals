@@ -85,7 +85,7 @@ public class P10C extends Frame implements ActionListener {
 			l9.setText(data1);
 			String data2 = "Sub1: "+t3.getText()+"    Sub2: "+t4.getText()+"    Sub3: "+t4.getText();
 			l10.setText(data2);
-			String data3 = "Total: "+tot.getText()+"    Per: "+per.getText()+"%";
+			String data3 = "Total: "+tot.getText()+"    Per: "+per.getText();
 			l11.setText(data3);
 		}
 		else {
