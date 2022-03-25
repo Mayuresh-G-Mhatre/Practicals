@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class P10B extends Frame implements ActionListener {
+public class P10B implements ActionListener {
 	//Declaring object
 	Frame f = new Frame("Mini Calculator");
 	Label l1 = new Label("First Number");
