@@ -1,11 +1,14 @@
 import java.awt.*;
 import java.awt.event.*;
 public class P10A extends Frame implements ActionListener {
-	Label l1, l2, l3, l4, l5;
+	Panel p1, p2;
+	Label l1, l2, l3, l4, l5, l6;
 	TextField t1, t2, t3;
-	Button b1, b2, b3, b4;
+	Button b1, b2;
 
 	public P10A() {
+		p1 = new Panel();
+		p2 = new Panel();
 		t1 = new TextField(10);
 		t2 = new TextField(10);
 		t3 = new TextField(10);
@@ -16,18 +19,19 @@ public class P10A extends Frame implements ActionListener {
 		l3 = new Label("Address");
 		l4 = new Label("Result");
 		l5 = new Label("");
+		l6 = new Label("");
 		
-		setLayout(new GridLayout(5,2));
-		add(l1);
-		add(t1);
-		add(l2);
-		add(t2);		
-		add(l3);
-		add(t3);
-		add(b1);
-		add(b2);
-		add(l4);
-		add(l5);
+		setLayout(new GridLayout(2,1));
+		add(p1);
+		p1.setLayout(new GridLayout(4, 2));
+		p1.add(l1);
+		p1.add(t1);
+		p1.add(l2);
+		p1.add(t2);		
+		p1.add(l3);
+		p1.add(t3);
+		p1.add(b1);
+		p1.add(b2);
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		setSize(500,500);
@@ -38,6 +42,12 @@ public class P10A extends Frame implements ActionListener {
 			}
 		}
 		);
+
+		add(p2);
+		p2.setLayout(new GridLayout(1, 3));
+		p2.add(l4);
+		p2.add(l5);
+		p2.add(l6);
 	}
 	public static void main(String[] args) {
 		new P10A();
@@ -47,8 +57,10 @@ public class P10A extends Frame implements ActionListener {
 		if(e.getSource() == b1) {
 			String data = "Name: "+t1.getText();
 			l4.setText(data);
-			String data1  = "Phone: "+t2.getText()+"    Address: "+t3.getText();
+			String data1 = "Phone: "+t2.getText();
 			l5.setText(data1);
+			String data2 = "Address: "+t3.getText();
+			l6.setText(data2);
 		}
 		else {
 			t1.setText("");
@@ -56,6 +68,7 @@ public class P10A extends Frame implements ActionListener {
 			t3.setText("");
 			l4.setText("");
 			l5.setText("");
+			l6.setText("");
 		}
 	}
 }
