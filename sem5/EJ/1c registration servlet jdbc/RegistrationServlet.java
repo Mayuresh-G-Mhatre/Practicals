@@ -23,7 +23,7 @@ public class RegistrationServlet extends HttpServlet {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tyit?autoReconnect=true&useSSL=false", "root", "password");
             out.println("Connection done successfully..." + "<br>");
        
-            ps = con.prepareStatement("insert into emp values(?,?,?,?)");
+            ps = con.prepareStatement("INSERT INTO emp VALUES(?,?,?,?)");
             ps.setString(1, username);
             ps.setString(2, password);
             ps.setString(3, email);
