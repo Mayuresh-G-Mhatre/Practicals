@@ -15,10 +15,13 @@ public class FileDownloadServlet extends HttpServlet {
         // for windows
         // response.setHeader("Content-Disposition", "attachment; filename=\""+ filename +"\"");
         // FileInputStream fileInputStream = new FileInputStream(filepath + filename);
+        // for windows
    
         // for linux
         response.setHeader("Content-Disposition", "attachment; filename=\""+ filename +"/");
         FileInputStream fileInputStream = new FileInputStream(filepath + "/" + filename);
+        // for linux
+        
         int i;
         while((i=fileInputStream.read()) != -1) {
             out.write(i);
