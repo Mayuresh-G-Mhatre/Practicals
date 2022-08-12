@@ -13,10 +13,10 @@ public class ProfileServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         if(session != null) {
             String name = (String) session.getAttribute("name");
-            out.println("Hello, " + name + ". Welcome to Profile");
+            out.println("Hello, " + name + ". Welcome to Profile!");
         }
         else {
-            out.println("Please login first");
+            out.println("Please login first!");
             request.getRequestDispatcher("login.html").include(request, response);
         }
         out.close();

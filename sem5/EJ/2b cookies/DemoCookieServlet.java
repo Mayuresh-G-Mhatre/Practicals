@@ -18,7 +18,7 @@ public class DemoCookieServlet extends HttpServlet {
             out.println("Welcome");
         }
         else {
-            out.println("You visited " + i + "times");
+            out.println("You visited " + i + " times");
         }
         i++;
     }
