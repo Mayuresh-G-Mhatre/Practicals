@@ -5,17 +5,16 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 public class HelloServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        String uname = request.getParameter("username");
-        String pswd = request.getParameter("password");
-        
-        if(uname.equals("shubham") && pswd.equals("123456789")) {
-            out.println("Hello, " + uname);
+        String n1 = request.getParameter("username");
+        String n2 = request.getParameter("password");
+        if(n1.equals("shubham") && n2.equals("shubham1234")) {
+            out.println("HELLO... " + n1);
         }
         else {
-            out.println("Login Failed!!!");
+            out.println("LOGIN FAILED... ");
         }
     }
 }
