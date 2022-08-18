@@ -10,7 +10,7 @@ public class DemoCookieServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String k = String.valueOf(i);
-        Cookie c = new Cookie("Visit", k);
+        Cookie c = new Cookie("visit", k);
         response.addCookie(c);
         int j = Integer.parseInt(c.getValue());
         if(j==1) {
