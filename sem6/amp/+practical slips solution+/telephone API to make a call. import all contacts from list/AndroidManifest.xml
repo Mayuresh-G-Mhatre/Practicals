@@ -1,0 +1,4 @@
+<!-- add the following lines to AndroidManifest.xml -->
+
+<uses-permission android:name="android.permission.READ_CONTACTS" />
+<uses-permission android:name="android.permission.CALL_PHONE" />

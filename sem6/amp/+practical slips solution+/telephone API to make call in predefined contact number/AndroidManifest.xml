@@ -1,0 +1,3 @@
+<!-- add the following permission to AndroidManifest.xml -->
+
+<uses-permission android:name="android.permission.CALL_PHONE" />
